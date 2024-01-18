@@ -1,0 +1,114 @@
+/*Author: Joash Tantiangco
+    Purpose: Create a wireframe
+    Title: wireframe.css
+*/
+
+/*Date:
+    2024 January 18:
+        - create a wireframe following the image set by byu-i as per requested 
+        (https://dribbble.com/shots/978949-Responsive-Wireframe-Templates-GIF/attachments/113429)
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+.headernav {
+    background-color: #001011;
+}
+
+img.navimg {
+    display: block;
+    margin: auto;
+    width: 90px;
+    height: 90px;
+}
+
+nav {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px;
+    color: #ECF7FF;
+}
+
+nav li a:hover {
+    background-color: #64E9EE;
+}
+
+nav li a:active {
+    background-color: #64E9EE;
+}
+
+div.hero {
+    display: block;
+    background-color: #093A3E;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+div.subdiv {
+    position: static;
+    top: 50%;
+    width: 30%;
+    text-align: center;
+    overflow-wrap: break-word;
+}
+
+img.heroimg {
+    padding: 5px;
+    width: 1200px;
+    height: 300px;
+    opacity: 0.5;
+}
+
+div.herodiv {
+    display: inline-block;
+    position: static;
+    background-color: #3AAFB9;
+    color: #ECF7FF;
+}
+
+.head {
+    font-family:serif;
+}
+
+p.text {
+    font-family:sans-serif;
+}
+
+div.prod {
+    display: block;
+    max-width: 100%;
+    background-color: #193F5A;
+    padding: 10px;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+}
+
+div.subprod {
+    display: inline-block;
+    background-color: #64E9EE;
+    margin: 5px;
+    padding: 15px;
+    width: 200px;
+    height: 300px;
+}
+
+div.text {
+    background-color: #ECF7FF;
+    padding: 3px;
+}
+
+img.prodimg {
+    display: block;
+    margin: auto;
+    width: 150px;
+    height: 150px;
+}
+
