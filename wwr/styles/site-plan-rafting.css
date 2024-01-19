@@ -1,0 +1,68 @@
+/*  Author: Joash Tantiangco
+    Purpose: Create a rafting site plan as required in the wdd130 course of byu idaho
+    Title: site-plan-rafting.html
+*/
+
+/*Date:
+    19 January 2024:
+*/
+
+/* import roboto slab and cousine*/
+@import url('https://fonts.googleapis.com/css2?family=Cousine&family=Roboto+Slab:wght@300&display=swap');
+
+:root {
+    --primary-color: #E4572E;
+    --secondary-color: #29335C;
+    --accent1-color: #F3A712;
+    --accent2-color: #669BBC;
+
+    --heading-font: 'Roboto Slab', serif;
+    --paragraph-font: 'Cousine', monospace;
+
+    --nav-background-color: #E4572E;
+    --nav-link-color: #F3A712;
+    --nav-hover-link-color: #F3A712CB;
+    --nav-hover-background-color: #F3A712CB;
+}
+
+body {
+    font-family: 'Cousine', monospace, Arial, Helvetica, sans-serif;
+    max-width: 960px;
+    padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Slab', serif, 'Times New Roman', Times, serif;
+    color: #29335C;
+}
+
+header {
+    padding: 20px;
+    background-color: #E4572EBC;
+}
+
+p {
+    padding: 25px;
+}
+
+nav {
+    background-color: #E4572E;
+    font-size: 1.2rem;
+    display: flex;
+}
+
+nav a {
+    display: block;
+    color: #29335C;
+    text-decoration: none;
+    padding: 1rem;
+}
+
+nav a:link, nav a:visited {
+    color: #29335CAA;
+}
+
+nav a:hover {
+    color: #29335CCB;
+    background-color: #F3A712CB;
+}
