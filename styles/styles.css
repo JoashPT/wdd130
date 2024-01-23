@@ -11,7 +11,19 @@
     2024 January 19:
         - added styles for main, aside, and footer
         - changed some values for p and img[changed to main img]
+
+    2024 January 23:
+        - Added universal declaration
+        - Added float in main img
+        - Added box class and removed aside repetitions
+        - Added aside > h2 declaration
 */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 nav {
     background-color: steelblue;
@@ -29,6 +41,7 @@ h1 {
 }
 
 main img {
+    float: right;
     width: 150px;
     height: auto;
     border: 1px solid steelblue;
@@ -46,11 +59,7 @@ main {
 
 aside {
     width: 20rem;
-    margin: 1rem;
     border: 1px solid rgba(0, 0 0, 0.2);
-    padding: 1rem;
-    background-color: #eee;
-    color: #333;
     text-align: center;
 }
 
@@ -59,8 +68,23 @@ aside img {
     height: auto;
 }
 
+aside > h2 {
+    position: relative;
+    top: 50px;
+    left: 150px;
+}
+
 footer {
     margin-top: 15px;
     border-top: 1px solid #000;
     text-align: center;
+}
+
+/*Class Selectors*/
+
+.box {
+    margin: 1rem;
+    padding: 1rem;
+    background-color: #eee;
+    color: #333;
 }
