@@ -86,7 +86,7 @@ footer {
 .box {
     margin: 1rem;
     padding: 1rem;
-    border: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: #eee;
     color: #333;
 }
