@@ -68,7 +68,7 @@ aside img {
     height: auto;
 }
 
-aside > h2 {
+aside h2 {
     position: relative;
     top: 50px;
     left: 150px;
