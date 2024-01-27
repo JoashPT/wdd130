@@ -1,0 +1,103 @@
+/*  Author: Joash Tantiangco
+    Purpose: Create an about page for the wwr project
+    Title: about.html
+*/
+
+/*  Date:
+    2024 January 24:
+    - Created Step 1 to Step 4 of the assignment as instructed
+
+    2024 January 27:
+    - Added transparency to background-color
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cousine&family=Roboto+Slab:wght@300&display=swap');
+
+:root {
+    margin: 50px;
+    max-width: 100%;
+    box-sizing: border-box;
+
+    --primary-color: #E4572E;
+    --secondary-color: #29335C;
+    --secondary-alpha-color: #29335CED;
+    --accent1-color: #F3A712;
+    --accent2-color: #669BBC;
+    --accent2-alpha-color: #669BBCAA;
+
+    --heading-font: 'Roboto Slab', serif;
+    --paragraph-font: 'Cousine', monospace;
+
+    --nav-background-color: #E4572E;
+    --nav-link-color: #F3A712;
+    --nav-hover-link-color: #F3A712CB;
+    --nav-hover-background-color: #F3A712CB;
+}
+
+body {
+    width: 80%;
+    min-width: 500px;
+    margin: 0 auto;
+}
+
+h1, h2 {
+    font-family: var(--heading-font);
+    color: var(--secondary-color);
+}
+
+p {
+    font-family: var(--paragraph-font);
+    padding: 25px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer a img {
+    width: 30px;
+    margin: 5px;
+    text-decoration: none;
+}
+
+/* Class selector */
+
+div.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    & > img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    & > h1 {
+        width: 100%;
+        padding: 10px 0;
+        text-align: center;
+        top: 10%;
+        background-color: var(--accent2-alpha-color);
+    }
+
+    & > article {
+        display: block;
+        background-color: var(--secondary-alpha-color);
+        color: var(--accent2-color);
+        width: 80%;
+        top: 30%;
+
+        & > img {
+            float: right;
+            width: 25%;
+            margin: 10px;
+        }
+    }
+
+    & > h1, & > article {
+        margin: 0 10%;
+        position: absolute;
+    }
+}
