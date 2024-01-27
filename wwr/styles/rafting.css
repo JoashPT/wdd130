@@ -67,37 +67,38 @@ div.hero {
     position: relative;
     display: flex;
     justify-content: center;
+}
 
-    & > img {
-        display: block;
-        width: 100%;
-        height: auto;
-    }
+div.hero > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
 
-    & > h1 {
-        width: 100%;
-        padding: 10px 0;
-        text-align: center;
-        top: 10%;
-        background-color: var(--accent2-alpha-color);
-    }
+div.hero > h1 {
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    top: 10%;
+    background-color: var(--accent2-alpha-color);
+}
 
-    & > article {
-        display: block;
-        background-color: var(--secondary-alpha-color);
-        color: var(--accent2-color);
-        width: 80%;
-        top: 30%;
+div.hero > article {
+    display: block;
+    background-color: var(--secondary-alpha-color);
+    color: var(--accent2-color);
+    width: 80%;
+    top: 30%;
+}
 
-        & > img {
-            float: right;
-            width: 25%;
-            margin: 10px;
-        }
-    }
+div.hero > article  > img {
+    float: right;
+    width: 25%;
+    margin: 10px;
+}
 
-    & > h1, & > article {
-        margin: 0 10%;
-        position: absolute;
-    }
+
+div.hero > h1, div.hero > article {
+    margin: 0 10%;
+    position: absolute;
 }
