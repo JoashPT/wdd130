@@ -73,10 +73,10 @@ p {
 
 main {
     display: grid;
+    align-items: center;
     grid-template: 1fr 1fr 1fr / 2fr 1fr;
     max-width: 840px;
     grid-column: 2;
-    align-items: center;
     gap: 15px;
 }
 
