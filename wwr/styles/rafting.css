@@ -10,29 +10,40 @@
     2024 January 27:
     - Added transparency to background-color
 
+    2024 January 31:
+    - Added Universal selector
+    - Added history class
+    - Added adventure class
+    - Added footer
+    - Introduced display flex or grid to multiple containers
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Cousine&family=Roboto+Slab:wght@300&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 :root {
     margin: 50px;
     max-width: 100%;
-    box-sizing: border-box;
+    min-width: 800px;
 
-    --primary-color: #E4572E;
-    --secondary-color: #29335C;
-    --secondary-alpha-color: #29335CED;
-    --accent1-color: #F3A712;
-    --accent2-color: #669BBC;
-    --accent2-alpha-color: #669BBCAA;
+    --border-color: #274C77;
+    --padding-color-1: #6096BA;
+    --padding-color-2: #A3CEF1;
+    --padding-color-3: #214361;
+    --padding-color-4: #214361CC;
+    --padding-color-5: #A3CEF1DD;
 
-    --heading-font: 'Roboto Slab', serif;
-    --paragraph-font: 'Cousine', monospace;
+    --background-color-1: #866511;
+    --background-color-2: #AF9144;
+    --background-color-3: #866511AA;
 
-    --nav-background-color: #E4572E;
-    --nav-link-color: #F3A712;
-    --nav-hover-link-color: #F3A712CB;
-    --nav-hover-background-color: #F3A712CB;
+    --text-color-1: #E7ECEF;
+    --text-color-2: #151515;
+    --text-color-3: #222A24;
+
 }
 
 body {
@@ -55,18 +66,43 @@ a {
     text-decoration: none;
 }
 
-footer a img {
-    width: 30px;
-    margin: 5px;
-    text-decoration: none;
+/* Header */
+header {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: var(--padding-color-1);
+    border: ridge var(--border-color) 10px;
+    margin: 15px 0;
 }
 
-/* Class selector */
+header > img {
+    grid-column: 1;
+}
+
+header > nav {
+    grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+nav a {
+    flex: 1;
+    text-align: center;
+    background-color: var(--padding-color-2);
+    border: solid var(--border-color) 3px;
+    color: var(--text-color-3);
+}
+/* Hero class */
 
 div.hero {
     position: relative;
     display: flex;
     justify-content: center;
+    border: ridge var(--border-color) 10px;
+    margin: 15px 0;
 }
 
 div.hero > img {
@@ -76,29 +112,168 @@ div.hero > img {
 }
 
 div.hero > h1 {
+    display: flex;
     width: 100%;
+    height: auto;
     padding: 10px 0;
-    text-align: center;
+    justify-content: center;
     top: 10%;
-    background-color: var(--accent2-alpha-color);
+    background-color: var(--padding-color-4);
+    border: double var(--padding-color-2) 5px;
+    color: var(--text-color-1);
 }
 
 div.hero > article {
-    display: block;
-    background-color: var(--secondary-alpha-color);
-    color: var(--accent2-color);
-    width: 80%;
-    top: 30%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-around;
+    background-color: var(--padding-color-5);
+    color: var(--text-color-3);
+    border: dashed var(--padding-color-3) 5px;
+    align-self: center;
 }
 
-div.hero > article  > img {
-    float: right;
-    width: 25%;
-    margin: 10px;
+div.hero > article > p {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+div.hero > article > img {
+    grid-column: 2;
+    width: 75%;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    margin: 3px;
 }
 
 
 div.hero > h1, div.hero > article {
     margin: 0 10%;
     position: absolute;
+}
+
+/* history class */
+
+.history {
+    display: grid;
+    grid-template: 1fr 3fr / 2fr 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--padding-color-1);
+    border: ridge var(--border-color) 10px;
+    margin: 15px 0;
+}
+
+.history > h2 {
+    grid-area: 1 / 1 / 2 / 4;
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: var(--background-color-2);
+    border: double var(--background-color-1) 5px;
+    color: var(--text-color-2);
+}
+
+.history > img {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 100%;
+    height: auto;
+    border: solid var(--border-color) 5px;
+}
+
+.history p {
+    background-color: var(--padding-color-2);
+    border: solid var(--border-color);
+    height: 100%;
+}
+
+.history p:nth-child(1) {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.history p:nth-child(2) {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+/* Adventure class */
+
+.adventure, .adventure figure {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-wrap: wrap;
+    background-color: var(--padding-color-1);
+    border: ridge var(--border-color) 10px;
+    margin: 15px 0;
+}
+
+.adventure > h2 {
+    align-self: flex-start;
+    text-align: center;
+    width: 100%;
+    height: 3rem;
+    line-height: 3rem;
+    background-color: var(--background-color-2);
+    border: double var(--background-color-1) 5px;
+    color: var(--text-color-2);
+}
+
+.adventure figure {
+    flex: 1;
+    /* border: solid black 10px; */
+    margin: 0.5rem;
+    border: solid var(--border-color);
+}
+
+.adventure figure figcaption {
+    display: none;
+}
+
+.adventure figure img:hover + figcaption {
+    display: block;
+    background-color: var(--background-color-1);
+    color: var(--text-color-1);
+    width: 100%;
+    text-align: center;
+    border-top: dotted var(--background-color-2) 1px;
+}
+
+.adventure figure img {
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
+
+footer {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--padding-color-2);
+    border-top: double var(--border-color) 10px;
+
+}
+
+footer p {
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    margin: 0 auto;
+}
+
+footer a img {
+    flex: 1;
+    width: 30px;
+    margin: 5px;
+    text-decoration: none;
 }
