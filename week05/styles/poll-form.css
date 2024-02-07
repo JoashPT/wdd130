@@ -1,0 +1,158 @@
+/*  Author: Joash Tantiangco
+    Purpose: Style the poll form html
+    Title: poll-form.css
+*/
+
+/*  Date:
+    2024 February 5
+*/
+
+/* 1 */
+@import url('https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* 2 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 3 */
+body {
+    font-family: Cousine;
+    font-size: 1em;
+    width: 700px;
+    margin: 0 auto;
+}
+
+/* 4 */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+h1 {
+    font-size: 1.5rem;
+    color: navy;
+}
+
+/* 5 */
+form {
+    display: grid;
+    margin: 0 auto;
+    min-width: 35%;
+    width: 600px;
+    padding: 10px;
+    border: 2px solid lightgray;
+    border-radius: 10px;
+    background-color: #eee;
+}
+
+/* 6 */
+fieldset {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0.25rem;
+    border: 1.5px solid #bbb;
+    padding: 1rem;
+}
+
+/* 7 */
+legend {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: navy
+}
+
+h1,
+legend {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+}
+
+/* 8 */
+label,
+input,
+button,
+select,
+textarea {
+    font-family: Cousine, Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+}
+
+
+
+label[for="prevaddress"]{
+    text-align: center;
+    margin: 0.5rem auto;
+}
+
+/* 9 */
+label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+/* 10 */
+input,
+select,
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* 11 */
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: bottom;
+}
+
+/* 12 */
+button {
+    width: 8rem;
+    height: 2.5rem;
+    margin: 1rem auto;
+    color: white;
+    background-color: navy;
+    border: none;
+    border-radius: 0.5rem;
+    padding: .25rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+/* 13 */
+footer {
+    margin: 1rem auto ;
+    text-align: center;
+    width: 650px;
+    font-size: 0.9rem;
+    color: darkgrey;
+    padding: 0.5rem 0;
+    border-top: 1px solid darkgray;
+}
+
+/* Step 4 */
+/* 1 */
+.form-item {
+    display: grid;
+    align-items: center;
+}
+
+/* 2 */
+.column1 {
+    grid-template-columns: 3fr 1fr;
+    margin: 0.5rem 0;
+}
+
+/* 3 */
+.column2 {
+    grid-template-columns: 1fr 2fr;
+    margin: 0.15rem 0;
+}

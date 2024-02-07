@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!--Author: Joash Tantiangco
+    Purpose: Create a quiz form with questions about html and css
+    Title: quiz.html
+-->
+
+<!--Date:
+    2024 February 6
+-->
+
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Joash Tantiangco">
+        <meta name="description" content="Simple quiz form for html and css">
+        <link rel="stylesheet" href="styles/quiz.css">
+        <title>Quiz</title>
+    </head>
+    <body>
+        <header>
+            <h1>Sample Quiz Form</h1>   
+        </header>
+        <main>
+            <form>
+                <fieldset>
+                    <legend>Simple quiz</legend>
+                    <label for="q1"><span class="q-num">1.</span> What does the acronym HTML stand for?</label>
+                    <input type="text" id="q1" name="q1">
+                    <label for="q2"><span class="q-num">2.</span> Using CSS, style the <span class="w-emp">body</span> with <span class="w-emp">width of 500px</span>
+                    and is <span class="w-emp">centered</span> on the page.</label>
+                    <textarea id="q2" name="q2"></textarea>
+                    <label for="q3"><span class="q-num">3.</span> Which of the following has an inline display value?</label>
+                    <select id="q3" name="q3">
+                        <option value="" selected disabled>Choose One From the Following...</option>
+                        <option value="wrong">&lt;p&gt;...&lt;/p&gt;</option>
+                        <option value="wrong">&lt;hr&gt;</option>
+                        <option value="correct">&lt;span&gt;...&lt;/span&gt;</option>
+                        <option value="wrong">&lt;div&gt;...&lt;/div&gt;</option>
+                    </select>
+                    <label for="q4"><span class="q-num">4.</span> What is the number which determines the <span class="w-emp">transparency</span> in 
+                    the following declaration?</label>
+                    <p class="basis">rgba(230, 100, 75, 0.5)</p>
+                    <input type="number" id="q4" name="q4">
+                </fieldset>
+                <button type="submit">Submit Quiz</button>
+            </form>
+        </main>
+        <footer>
+
+        </footer>
+    </body>
+</html>
