@@ -295,7 +295,7 @@ div.hero > h1, div.hero > article {
 }
 
 .companycontact h2 {
-    grid-area: 0 / 0 / 1 / 5;
+    grid-area: 1 / 1 / 2 / 5;
 }
 
 .companycontact div{
