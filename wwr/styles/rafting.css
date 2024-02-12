@@ -44,6 +44,8 @@
     --text-color-2: #151515;
     --text-color-3: #222A24;
 
+    --paragraph-font: Cousine;
+    --title-font: Roboto;
 }
 
 body {
@@ -52,14 +54,15 @@ body {
     margin: 0 auto;
 }
 
-h1, h2, h3 {
+h1, h2, h3, legend {
     font-family: var(--heading-font);
-    color: var(--secondary-color);
+    color: var(--text-color-2);
+    font-family: var(--title-font);
 }
 
 p {
     font-family: var(--paragraph-font);
-    padding: 25px;
+    /* padding: 25px; */
 }
 
 a {
@@ -286,33 +289,43 @@ div.hero > h1, div.hero > article {
 /* companycontact Class */
 .companycontact {
     display: grid;
-    grid-template: 1fr 4fr / 1fr 1fr 1fr 1fr;
+    grid-template: 2fr 5fr / 1fr 1fr 1fr 1fr;
     justify-content: space-around;
     align-self: center;
-    background-color: var(--padding-color-5);
+    background-color: var(--padding-color-1);
     color: var(--text-color-3);
-    border: dashed var(--padding-color-3) 5px;
+    border: ridge var(--padding-color-3) 10px;
+    column-gap: 0.5rem;
 }
 
-.companycontact h2 {
+.companycontact h1 {
     grid-area: 1 / 1 / 2 / 5;
+    background-color: var(--border-color);
+    color: var(--text-color-1);
+    column-gap: normal;
+    height: 3rem;
+    line-height: 3rem;
+    text-align: center;
+    border: double var(--padding-color-1) 5px;
 }
 
 .companycontact div{
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    justify-content: center;
-    align-items: start;
+    display: flex;
+    flex-flow: column wrap;
+    background-color: var(--padding-color-2);
+    padding: 0.75rem;
 }
 
 .companycontact div iframe {
+    box-sizing: border-box;
     border: none;
-    width: 600px; 
-    height: 450px;
+    width: 100%; 
+    height: auto;
 }
 
 /* companyemployee Class */
 .companyemployee {
+    display: grid;
     grid-template: 1fr 3fr / 1fr 1fr 1fr;
     width: 100%;
     height: auto;
@@ -324,16 +337,22 @@ div.hero > h1, div.hero > article {
 }
 
 .companyemployee h2 {
+    grid-area: 1 / 1 / 2 / 4;
     text-align: center;
+    height: 4rem;
+    line-height: 4rem;
     background-color: var(--background-color-2);
     border: double var(--background-color-1) 5px;
     color: var(--text-color-2);
 }
 
 .companyemployee figure {
-    flex: 1;
+    grid-row: 2 / 3;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0.5rem;
     border: solid var(--border-color);
+    height: auto;
 }
 
 .companyemployee figure figcaption {
@@ -351,7 +370,92 @@ div.hero > h1, div.hero > article {
 
 .companyemployee figure img {
     width: 100%;
-    height: auto;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+
+.name {
+    font-weight: bold;
 }
 
 /* userform Class */
+.userform {
+    display: grid;
+    margin: 15px auto;
+    min-width: 35%;
+    width: 600px;
+    padding: 10px;
+    border: 2px solid var(--border-color);
+    border-radius: 10px;
+    background-color: var(--padding-color-5);
+}
+
+fieldset {
+    display: grid;
+    grid-gap: 1rem;
+    margin: 0.25rem;
+    border: 1.5px solid var(--padding-color-3);
+    padding: 1rem;
+}
+
+legend {
+    padding: 0.5rem;
+    font-size: 1.25rem;
+    color: var(--text-color-2);
+}
+
+.contactinformation div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+.contactinformation label {
+    text-align: left;
+    padding-left: 1rem;
+}
+
+.messagepurpose {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.messagepurpose div {
+    display: grid;
+    grid-template-columns: 8fr 1fr;
+    align-content: center;
+}
+
+.contactinformation label, .messagepurpose label, .subscribe label {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+textarea {
+    width: 100%;
+    height: 10vh;
+    display: block;
+   }
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+}
+
+button {
+    float: right;
+    width: 8rem;
+    height: 2.5rem;
+    margin: 0.25rem;
+    color: var(--text-color-1);
+    background-color: var(--padding-color-3);
+    border: none;
+    border-radius: 0.5rem;
+    padding: .25rem;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: var(--padding-color-4);
+}
+

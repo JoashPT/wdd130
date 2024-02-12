@@ -37,61 +37,68 @@
                 <div>
                     <h3>Telephone Number</h3>
                     <p>+63 2 7798 6487</p>
+                    <p>+63 2 7998 6321</p>
                 </div>
                 <div>
                     <h3>Email</h3>
                     <p>aquablanc@yahoo.com</p>
-                    <p>https://twitter.com/aquablanc_official</p>
                     <p>aquablanc4@gmail.com</p>
                 </div>
                 <div>
                     <h3>Google Map</h3>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10923.258833231923!2d121.01277812487346!3d14.544554809438333!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x324053215f87de63%3A0x784790ef7a29da57!2sPhilippines!5e0!3m2!1sen!2sph!4v1707605467238!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6316.961872282809!2d121.03288229599151!3d14.56023521206899!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c907125044df%3A0xc1b9c0e364dae89e!2sNihon%20Cafe%20Bel%20Air!5e1!3m2!1sen!2sph!4v1707735784372!5m2!1sen!2sph" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </section>
             <section class="companyemployee">
                 <h2>Outstanding Employees</h2>
                 <figure>
                     <img src="images/happy-employee-1.jpg" alt="Rommel Villanueva, Equipment Maintenance Technician">
-                    <figcaption><span>Rommel Villanueva</span><br>Equipment Maintenance Technician</figcaption>
+                    <figcaption><span class="name">Rommel Villanueva</span><br>Equipment Maintenance Technician</figcaption>
                 </figure>
                 <figure>
                     <img src="images/happy-employee-2.jpg" alt="Kirsteen Sanchez, Assistant Marketing Manager">
-                    <figcaption><span>Kirsteen Sanchez</span><br>Assistant Marketing Manager</figcaption>
+                    <figcaption><span class="name">Kirsteen Sanchez</span><br>Assistant Marketing Manager</figcaption>
                 </figure>
                 <figure>
                     <img src="images/happy-employee-3.jpg" alt="Nimrod Shinar, Human Resources Advisor">
-                    <figcaption><span>Nimrod Shinar</span><br>Human Resources Advisor</figcaption>
+                    <figcaption><span class="name">Nimrod Shinar</span><br>Human Resources Advisor</figcaption>
                 </figure>
             </section>
             <section class="userform">
                 <form>
-                    <fieldset>
+                    <fieldset class="contactinformation">
                         <legend>Contact Information</legend>
                         <div>
-                            <label for="username">Username</label>
+                            <label for="username">Username<span>*</span></label>
                             <input type="text" id="username" name="username">
                         </div>
                         <div>
-                            <label for="useremail">Email Address</label>
+                            <label for="useremail">Email Address<span>*</span></label>
                             <input type="text" id="useremail" name="useremail">
                         </div>
                     </fieldset>
                     <fieldset>
+                        <fieldset class="messagepurpose">
+                            <legend>Select your purpose for your message:</legend>
+                            <div>
+                                <label for="gi">General Inquiry</label>
+                                <input type="radio" id="gi" name="message_purpose">
+                            </div>
+                            <div>
+                                <label for="rq">Reservation Question</label>
+                                <input type="radio" id="rq" name="message_purpose">
+                            </div>
+                            <div>
+                                <label for="ws">Website Suggestion</label>
+                                <input type="radio" id="ws" name="message_purpose">
+                            </div>
+                        </fieldset>
                         <div>
-                            <label for="gi">General Inquiry</label>
-                            <input type="radio" id="gi" name="general_inquiry">
-                            <label for="rq">Reservation Question</label>
-                            <input type="radio" id="rq" name="reservation_quesion">
-                            <label for="ws">Website Suggestion</label>
-                            <input type="radio" id="ws" name="website_suggestion">
-                        </div>
-                        <div>
-                            <label for="message">Your message</label>
+                            <label for="message">Your message:</label>
                             <textarea id="message" name="message"></textarea>
                         </div>
-                        <div>
-                            <label for="subscribe">Please subscribe me to the monthly newsletter</label>
+                        <div class="subscribe">
+                            <label for="subscribe">Please subscribe me to the monthly newsletter!</label>
                             <input type="checkbox" id="subscribe" name="subscribe">
                         </div>
                     </fieldset>
