@@ -459,3 +459,7 @@ button:hover {
     background-color: var(--padding-color-4);
 }
 
+.required {
+    color: #5B0000;
+}
+
